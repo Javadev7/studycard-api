@@ -2,6 +2,8 @@ const express =  require('express');
 const { requestAll, requestOne, create, update, drop } = require('../../db/requests');
 var router = express.Router()
 
+// Card routes
+
 router.get("/", (req, res, next) =>{
     requestAll("cards", (err, result) =>{
       if(err) return next(err);
